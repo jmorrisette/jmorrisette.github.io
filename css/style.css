@@ -1,0 +1,152 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:15px;
+	line-height:1.5;
+	
+	padding: 0;
+	margin: 0;
+	background-color:grey;
+	
+}
+
+/* Global */
+
+.container{
+	width:80%;
+	margin:auto;
+	overflow:hidden;
+}
+
+.button_1{
+	height: 30px;
+	background: blue;
+	color:white;
+	border:none;
+	padding:30;
+}
+
+
+/* Header */
+
+header{
+	background-color:grey;
+	color:white;
+	border-bottom:white 5px solid;
+}
+
+
+header a{
+	color:white;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-size: 16px;
+}
+
+header ul{
+	margin:0;
+	padding:0;
+}
+
+header li{
+	float:left;
+	display:inline;
+	padding: 0 20px 0 20px;
+}
+
+header #branding {
+	margin:0;
+	padding:0;
+	float: left;
+}
+
+header nav{
+	float:right;
+	margin-top: 30px;
+}
+
+header .highlight, header .current a{
+	color:blue;
+	font-weight:bold;
+}
+
+header a:hover{
+	color:rgb(0,255,0);
+	font-weight:bold;
+}
+
+/* Showcase */
+
+#showcase{
+	min-height: 600px;
+	background:url('../house2.jpg') no-repeat;
+	background-size:100%;
+	text-align:center;
+	color:white;
+}
+
+#showcase h1{
+	font-size:30px;
+}
+#contact {
+	color:white;
+	background: grey;
+	height:50px;
+}
+
+#contact h1{
+	float:left;
+	padding:0;
+	margin-top:-10px;
+	color:white;
+}
+#contact form {
+	float:right;
+	
+}
+
+#contact input{
+	padding:0;
+	height:30px;
+	width: 150px;
+}
+
+footer{
+	padding:20px;
+	text-align:center;
+	color:white;
+	background-color: blue;
+	
+}
+
+/*About*/
+
+#about {
+	background-color:grey;
+	
+}
+
+#about p {
+	color:white;
+	background:blue;
+	padding:20px;
+	
+	
+	text-align:center;
+}
+
+/* Services */
+#icons {
+	background:white;
+	
+}
+
+
+#icons .box{
+	
+	padding: 0 30px 0 30px;
+	float:left;
+	
+}
+
+
+
