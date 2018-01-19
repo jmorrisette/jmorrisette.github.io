@@ -1,47 +1,75 @@
-var n;
-var p;
-var s;
+var u;
+var l;
+var a;
+var mods = [];
+var x;
+var y;
+var count;
 
 function setup() {
-  createCanvas(800, 800);
-  stroke(0, 150);
-  fill(0, 20);
-  noLoop();
-  redraw();
+  createCanvas(windowWidth, windowHeight);
+  //u = int(width/15);
+  u = 100;
+  l = 20;
+  var highCount = height/80;
+  var wideCount = width/80;
+  count = int(highCount * wideCount);
+
+  var index = 0;
+  for (var xc = 0; xc < wideCount; xc++) {
+    for (var yc = 0; yc < highCount; yc++) {
+      mods[index++] = new Module(int(xc)*u,int(yc)*u);
+    }
+   }
 }
 
 function draw() {
-  n = int(random(10,24));
-  do {
-    s = [ int(random(1, n)), int(random(1, n)), int(random(1, n)) ];
-  }
-  while (n % s[2] === 0);
 
-  p = [];
-  for (var i = 0; i < n; i++) {
-    var ang = lerp(0, TWO_PI, i / n);
-    p.push({x: 300 * cos(ang), y:300 * sin(ang)});
+
+
+  if (mouseIsPressed) {
+    background(0);
+    stroke(255,163,163);
+  } else {
+    background(255,163,163);
+    stroke(255);
   }
 
-  background(255);
-  translate(width/2, height/2);
-  var i1 = 0;
-  do {
-    var i2 = (i1 + s[0]) % n;
-    var i3 = (i1 + s[1]) % n;
-    var i4 = (i1 + s[2]) % n;
-    beginShape();
-      curveVertex(p[i1].x, p[i1].y);
-      curveVertex(p[i2].x, p[i2].y);
-      curveVertex(p[i3].x, p[i3].y);
-      curveVertex(p[i4].x, p[i4].y);
-    endShape(CLOSE);
-    bezier(p[i1].x, p[i1].y, p[i2].x, p[i2].y, p[i3].x, p[i3].y, p[i4].x, p[i4].y);
-    i1 = i3;
+  strokeWeight(15);
+
+  translate(20, 20);
+
+  for (var i = 0; i <= count; i++) {
+    mods[i].update();
+    mods[i].draw2();
   }
-  while (i1 !== 0);
+
 }
 
-function mousePressed() {
-  redraw();
+function Module(_x, _y) {
+  this.x = _x;
+  this.y = _y;
+  this.a = 0;
+
+
+}
+
+Module.prototype.update = function() {
+  if (mouseIsPressed) {
+    this.a = -20 * (atan2(mouseY-this.y, mouseX-this.x));
+  } else {
+    this.a = atan2(mouseY-this.y, mouseX-this.x);
+  }
+}
+
+Module.prototype.draw2 = function() {
+  push();
+  translate(this.x, this.y);
+  rotate(this.a);
+  line(-l,0,l,0);
+  pop();
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
