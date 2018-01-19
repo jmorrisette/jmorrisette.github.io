@@ -25,6 +25,7 @@ function Jitter() {
   };
 
   this.display = function() {
+		
     ellipse(this.x, this.y, this.diameter, this.diameter);
   }
 };
