@@ -1,72 +1,47 @@
-/* OpenProcessing Tweak of *@*http://www.openprocessing.org/sketch/2363*@* */
-/* !do not delete the line above, required for linking your tweak if you upload again */
-// Gravity Swarm
-// Claudio Gonzales, June 2009
-// Albuquerque, New Mexico
-
-var numParticles;
-var colour;
-var Z = [];
-var mouseHeld;
+var n;
+var p;
+var s;
 
 function setup() {
-  mouseHeld = false;
-  numParticles = 1000;
-  colour = random(1);
-
-  createCanvas(500,500);
-  background(255);
-  smooth();
-
-  for(var i = 0; i < numParticles; i++) {
-    Z.push(new particle( random(width), random(height), 0, 0, 1 ));
-  }
-
-  //frameRate(60);
-  colorMode(RGB,255);
-
+  createCanvas(800, 800);
+  stroke(0, 150);
+  fill(0, 20);
+  noLoop();
+  redraw();
 }
 
 function draw() {
-
-  filter(INVERT);
-
-  var r;
-
-  stroke(0);
-  fill(255);
-  rect(0,0,width,height);
-
-  colorMode(HSB,1);
-  for(var i = 0; i < Z.length; i++) {
-    if( mouseHeld && mouseButton == LEFT ) {
-      Z[i].gravitate( new particle( mouseX, mouseY, 0, 0, 1 ) );
-    }
-    else if(mouseHeld && mouseButton == RIGHT ) {
-      Z[i].repel( new particle( mouseX, mouseY, 0, 0, 1 ) );
-    }
-    else {
-      Z[i].deteriorate();
-    }
-    Z[i].update();
-    r = i/Z.length;
-    stroke( colour, pow(r,0.1), 1-r, 0.15 );
-    Z[i].display();
+  n = int(random(10,24));
+  do {
+    s = [ int(random(1, n)), int(random(1, n)), int(random(1, n)) ];
   }
-  colorMode(RGB,255);
+  while (n % s[2] === 0);
 
-  colour+=random(0.01);
-  if( colour > 1 ) {
-    colour = colour%1;
+  p = [];
+  for (var i = 0; i < n; i++) {
+    var ang = lerp(0, TWO_PI, i / n);
+    p.push({x: 300 * cos(ang), y:300 * sin(ang)});
   }
 
-  filter(INVERT);
+  background(255);
+  translate(width/2, height/2);
+  var i1 = 0;
+  do {
+    var i2 = (i1 + s[0]) % n;
+    var i3 = (i1 + s[1]) % n;
+    var i4 = (i1 + s[2]) % n;
+    beginShape();
+      curveVertex(p[i1].x, p[i1].y);
+      curveVertex(p[i2].x, p[i2].y);
+      curveVertex(p[i3].x, p[i3].y);
+      curveVertex(p[i4].x, p[i4].y);
+    endShape(CLOSE);
+    bezier(p[i1].x, p[i1].y, p[i2].x, p[i2].y, p[i3].x, p[i3].y, p[i4].x, p[i4].y);
+    i1 = i3;
+  }
+  while (i1 !== 0);
 }
 
-function mousePressed(x, y) {
-  mouseHeld = true;
-}
-
-function mouseReleased(x, y) {
-  mouseHeld = false;
+function mousePressed() {
+  redraw();
 }
