@@ -1,185 +1,107 @@
-var evolvingWordsSketch = function(p) {
-	// Global variables
-	var positions = undefined;
-	var step = 0;
+/* OpenProcessing Tweak of *@*http://www.openprocessing.org/sketch/6707*@* */
+/* !do not delete the line above, required for linking your tweak if you upload again */
 
-	// Initial setup
-	p.setup = function() {
-		var maxCanvasWidth, canvasWidth, canvasHeight;
+var points = [];
+var md = false;
 
-		// Resize the canvas if necessary
-		maxCanvasWidth = document.getElementById("widthRef").clientWidth - 20;
-		canvasWidth = 600;
-		canvasHeight = 400;
+function setup(){
+  createCanvas(800,600);
+  background(255);
+  smooth();
+  //noStroke();
 
-		if (canvasWidth > maxCanvasWidth) {
-			canvasHeight = canvasHeight * maxCanvasWidth / canvasWidth;
-			canvasWidth = maxCanvasWidth;
-		}
+}
 
-		// Create the canvas
-		p.createCanvas(canvasWidth, canvasHeight);
+function draw(){
+  if(md){
+    for(var f=0; f<500; f+=1){
+      //for(int g=0; g<height; g+=height/10){
+      points.push(new Point(random(0,width),random(0,height)) );
+      //}
+    }
+  }
+  //fill(255,10);
+  //rect(-1,1,width+1,height+1);
+  //background(255);
+  noiseDetail(8,0);
+  //noiseSeed(1);
+  for(var i=points.length-1; i>0; i--){
+    points[i].update();
+    if(points[i].finished){
+      points.splice(i, 1);
+    }
+  }
 
-		// Calculate the trajectory positions for every particle
-		positions = calculateTrajectories("This is not a LOVE story", 2 * canvasWidth);
-	};
+  //println(points.size());
+}
 
-	// Execute the sketch
-	p.draw = function() {
-		// Clean the canvas
-		p.background(0, 100);
+function mousePressed(){
+  md = true;
+}
+function mouseReleased(){
+  md = false;
+}
+function keyPressed(){
+  background(255);
+  noiseSeed(round(random(1000)));
+  for(var i=points.length-1; i>0; i--){
+    //p.x = random(width);
+    //p.y = random(height);
+    points.splice(i, 1);
+  }
+  //saveFrame("perlin####.png");
+}
 
-		// Paint the trajectories step by step
-		if (step < positions[0].length) {
-			p.noStroke();
-			p.fill(0, 150, 200, 100);
+function Point(x_, y_)
+{
+  this.x = x_;
+  this.y = y_;
+  this.xv = 0;
+  this.yv = 0;
 
-			// Draw all the particles
-			for (var i = 0; i < positions.length; i++) {
-				p.ellipse(positions[i][step].x, positions[i][step].y, 5, 5);
-			}
-		} else if (step > positions[0].length + 20) {
-			// Stop the sketch
-			p.noLoop();
-		}
+  this.maxSpeed = 3000000;
+  this.finished = false;
 
-		step++;
-	};
+  this.update = function(){
+    stroke(0,16);
+    var r = random(1);
+    this.xv = cos(noise(this.x*.01,this.y*.01)*TWO_PI);
+    this.yv = -sin(noise(this.x*.01,this.y*.01)*TWO_PI);
 
-	//
-	// Calculates the particles trajectories
-	//
-	calculateTrajectories = function(text, nParticles) {
-		var words, limits, trajectories, nSteps, i;
+    if(this.x>width){
+      //this.x = 1;
+      this.finished = true;
+    }
+    else if(this.x<0){
+      //this.x = width-1;
+      this.finished = true;
+    }
+    if(this.y>height){
+      //this.y = 1;
+      this.finished = true;
+    }
+    else if(this.y<0){
+      //this.y = height-1;
+      this.finished = true;
+    }
 
-		// Split the text into words
-		words = p.splitTokens(text, " ");
+    if(this.xv>this.maxSpeed){
+      this.xv = this.maxSpeed;
+    }
+    else if(this.xv<-this.maxSpeed){
+      this.xv = -this.maxSpeed;
+    }
+    if(this.yv>this.maxSpeed){
+      this.yv = this.maxSpeed;
+    }
+    else if(this.yv<-this.maxSpeed){
+      this.yv = -this.maxSpeed;
+    }
 
-		// Calculate the words limits
-		limits = [];
+    this.x += this.xv;
+    this.y += this.yv;
 
-		for (i = 0; i < words.length; i++) {
-			limits[i] = wordLimits(words[i]);
-		}
+    line(this.x+this.xv, this.y+this.yv,this.x,this.y );
+  }
 
-		// Calculate the particle trajectories
-		trajectories = [];
-		nSteps = 80;
-
-		for (i = 0; i < nParticles; i++) {
-			trajectories[i] = trajectory(limits, nSteps);
-		}
-
-		return trajectories;
-	};
-
-	//
-	// Calculates the word limits
-	//
-	wordLimits = function(word) {
-		var textSize, limits, x, y, dx, dy, px, py, pixelDensity, pixelDensitySq, isLimit;
-
-		// Paint the background
-		p.background(0);
-
-		// Paint the text
-		textSize = 0.25 * p.width;
-		p.push();
-		p.textFont("Helvetica");
-		p.textAlign(p.CENTER);
-		p.textSize(textSize);
-		p.textStyle(p.BOLD);
-		p.noStroke();
-		p.fill(255);
-		p.text(word, 0.5 * p.width, 0.5 * p.height + 0.25 * textSize);
-		p.pop();
-
-		// Calculate the limits
-		limits = [];
-		pixelDensity = p.displayDensity();
-		pixelDensitySq = pixelDensity * pixelDensity;
-
-		p.loadPixels();
-
-		for (y = 0; y < p.height; y++) {
-			for (x = 0; x < p.width; x++) {
-				isLimit = false;
-
-				if (p.pixels[4 * (x * pixelDensity + y * p.width * pixelDensitySq)] === 255) {
-					// Check the nearby pixels for a color change
-					for (dx = -1; dx <= 1; dx++) {
-						for (dy = -1; dy <= 1; dy++) {
-							// Don't calculate more if we already know that it's
-							// a limit
-							if (!isLimit) {
-								px = x + dx;
-								py = y + dy;
-
-								if (px >= 0 && px < p.width && py >= 0 && py < p.height) {
-									if (p.pixels[4 * (px * pixelDensity + py * p.width * pixelDensitySq)] !== 255) {
-										isLimit = true;
-									}
-								}
-							}
-						}
-					}
-				}
-
-				if (isLimit) {
-					limits.push(new toxi.geom.Vec2D(x, y));
-				}
-			}
-		}
-
-		p.updatePixels();
-
-		// Clean the canvas
-		p.background(0);
-
-		return limits;
-	};
-
-	//
-	// Calculates the particle trajectory
-	//
-	trajectory = function(limits, steps) {
-		var positionInWords, i, spline, center;
-
-		// Calculate the particle position in the different words
-		positionInWords = [];
-
-		for (i = 0; i < limits.length; i++) {
-			positionInWords[i] = limits[i][Math.floor(limits[i].length * Math.random())];
-		}
-
-		// Add the spline points
-		spline = new toxi.geom.Spline2D();
-		spline.setTightness(0.2);
-		minDim = Math.min(p.width, p.height);
-		maxDim = Math.max(p.width, p.height);
-		center = new toxi.geom.Vec2D(0.5 * p.width, 0.5 * p.height);
-
-		for (i = 0; i < positionInWords.length - 1; i++) {
-			spline.add(positionInWords[i]);
-			spline.add(randomVector(0, 15).add(center));
-			spline.add(randomVector(0, 0.2 * minDim).add(positionInWords[i + 1]));
-			spline.add(randomVector(0, 0.02 * minDim).add(positionInWords[i + 1]));
-		}
-
-		spline.add(positionInWords[positionInWords.length - 1]);
-		spline.add(randomVector(0, 15).add(center));
-		spline.add(center);
-		spline.add(randomVector(maxDim, 3 * maxDim).add(center));
-
-		return spline.computeVertices(steps);
-	};
-
-	//
-	// Returns a random vector within the given radius limits
-	//
-	randomVector = function(minRadius, maxRadius) {
-		var angle = p.TWO_PI * Math.random();
-		var radius = minRadius + (maxRadius - minRadius) * p.randomGaussian();
-		return new toxi.geom.Vec2D(radius * Math.cos(angle), radius * Math.sin(angle));
-	};
-};
+}
