@@ -1,7 +1,7 @@
 var bug;  // Declare object
 
 function setup() {
-  createCanvas(710, 400);
+  createCanvas(window.height, window.width);
   // Create object
   bug = new Jitter();
 }
