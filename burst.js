@@ -32,7 +32,7 @@ function draw() {
     }
   }
   if (allDead(particles)) {
-    particles = new Array();
+    boom();
   }
 }
 
@@ -44,7 +44,15 @@ function allDead(particlesToCheck) {
     }
   }
   return true;
+}
 
+//initialize a new list of particles
+function boom() {
+  particles = new Array();
+  for (var i = 0; i < numParticles; i++) {
+    temp = new particle(width/2, height/2, 10, getRandomVelocity(), getRandomVelocity());
+    particles.push(temp);
+  }
 }
 
 
