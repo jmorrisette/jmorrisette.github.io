@@ -9,8 +9,8 @@ var x;
 var y;
 var count;
 
-function setup() {
-  createCanvas(500,300);
+function p.setup() {
+  p.createCanvas(500,300);
   //u = int(width/15);
   u = 100;
   l = 20;
@@ -26,30 +26,30 @@ function setup() {
    }
 }
 
-function draw() {
+function p.draw() {
 
 
 
   if (mouseIsPressed) {
-    background(0);
-    stroke(255,163,163);
+    p.background(0);
+    p.stroke(255,163,163);
   } else {
-    background(255,163,163);
-    stroke(255);
+    p.background(255,163,163);
+    p.stroke(255);
   }
 
-  strokeWeight(15);
+  p.strokeWeight(15);
 
-  translate(20, 20);
+  p.translate(20, 20);
 
   for (var i = 0; i <= count; i++) {
-    mods[i].update();
-    mods[i].draw2();
+    mods[i].p.update();
+    mods[i].p.draw2();
   }
 
 }
 
-function Module(_x, _y) {
+function p.Module(_x, _y) {
   this.x = _x;
   this.y = _y;
   this.a = 0;
@@ -57,7 +57,7 @@ function Module(_x, _y) {
 
 }
 
-Module.prototype.update = function() {
+Module.prototype.p.update = function() {
   if (mouseIsPressed) {
     this.a = -20 * (atan2(mouseY-this.y, mouseX-this.x));
   } else {
@@ -65,7 +65,7 @@ Module.prototype.update = function() {
   }
 }
 
-Module.prototype.draw2 = function() {
+Module.prototype.p.draw2 = function() {
   push();
   translate(this.x, this.y);
   rotate(this.a);
@@ -73,7 +73,7 @@ Module.prototype.draw2 = function() {
   pop();
 }
 
-function windowResized() {
+function p.windowResized() {
   //resizeCanvas(windowWidth, windowHeight);
 }
 };
@@ -90,16 +90,16 @@ var particles = [];
 var numParticles = 100;
 
 
-function setup() {
-  createCanvas(500,300);
+function p.setup() {
+  p.createCanvas(500,300);
   for (var i = 0; i < numParticles; i++) {
-    temp = new particle(width/2, height/2, 10, getRandomVelocity(), getRandomVelocity());
+    temp = new particle(width/2, height/2, 10, p.getRandomVelocity(), p.getRandomVelocity());
     particles.push(temp);
   }
 }
 
-function draw() {
-  background(color(0,0,0));
+function p.draw() {
+  p.background(color(0,0,0));
   for (var i = 0; i < particles.length; i++) {
     var p = particles[i];
     p.move();
@@ -107,13 +107,13 @@ function draw() {
       particles[i].display();
     }
   }
-  if (allDead(particles)) {
-    boom();
+  if (p.allDead(particles)) {
+    p.boom();
   }
 }
 
 //check to see if each particle in the particles array isDead
-function allDead(particlesToCheck) {
+function p.allDead(particlesToCheck) {
   for (var i = 0; i < particlesToCheck.length; i++) {
     if (particlesToCheck[i].isDead == false) {
       return false;
@@ -123,10 +123,10 @@ function allDead(particlesToCheck) {
 }
 
 //initialize a new list of particles
-function boom() {
+function p.boom() {
   particles = new Array();
   for (var i = 0; i < numParticles; i++) {
-    temp = new particle(width/2, height/2, 10, getRandomVelocity(), getRandomVelocity());
+    temp = new p.particle(width/2, height/2, 10, p.getRandomVelocity(), p.getRandomVelocity());
     particles.push(temp);
   }
 }
@@ -136,7 +136,7 @@ function boom() {
 
 //CLASSES***********************
 //particle class
-function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
+function p.particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
   this.x = tempX;
   this.y = tempY;
   this.diameter = tempDiameter;
@@ -164,7 +164,7 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
 }
 
 //helper function used when initializing a new particle
-function getRandomVelocity() {
+function p.getRandomVelocity() {
   var a = Math.random()*2;
   var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
   var result = a*plusOrMinus;
