@@ -51,7 +51,7 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
     this.y += this.yVelocity;
     this.hp --;
 
-    if (this.hp) <= 0) {
+    if (this.hp <= 0) {
       this.isDead = true;
     };
   }
