@@ -49,9 +49,9 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
   this.move = function(){
     this.x += this.xVelocity;
     this.y += this.yVelocity;
-    lifespan --;
+    this.hp --;
 
-    if (lifespan <= 0) {
+    if (this.hp) <= 0) {
       this.isDead = true;
     };
   }
