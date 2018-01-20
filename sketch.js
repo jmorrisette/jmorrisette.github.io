@@ -59,7 +59,7 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
 	this.twinkles = new Array();
   this.hp = 255;
 
-	for (var i = 0; i < 3; i++) {
+	for (var i = 0; i < 30; i++) {
 		temp = new twinkle(this.x,this.y,this);
 		this.twinkles.push(temp);
 	}
