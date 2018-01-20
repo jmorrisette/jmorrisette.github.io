@@ -1,7 +1,4 @@
 
-var test = [ {id:1, posX: 10, posY: 50, radius: 10},
-            {id:2, posX: 20 posY: 100, radius: 20},
-            {id:2, posX: 30 posY: 200, radius: 30} ];
 var particles = [];
 var numParticles = 10;
 
@@ -29,7 +26,7 @@ function draw() {
         // remove object
         //test.splice(removeIndex, 1);
         console.log("paticle #" + i + "died.");
-        
+
     }
     else {
       particles[i].display();
