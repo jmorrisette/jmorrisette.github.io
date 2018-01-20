@@ -86,13 +86,6 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
 		}
 	}
 
-	//helper function used when initializing a new particle
-	function getRandomVelocity() {
-  	var a = Math.random()*2;
-  	var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
-  	var result = a*plusOrMinus;
-  	return result;
-	}
 }//END paricle class
 
 //twinkle class
@@ -121,6 +114,18 @@ function twinkle(xloc, yloc,paricle) {
     fill(color(this.hp, this.hp, this.hp));
     ellipse(this.xloc,this.yloc,5,5);
   }
-}//END glimpse
+}//END twinkle class
 
 //END CLASSES*******************
+
+//HELPER FUCNTIONS***************
+
+//helper function used when initializing a new particle
+function getRandomVelocity() {
+	var a = Math.random()*2;
+	var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
+	var result = a*plusOrMinus;
+	return result;
+}
+
+//END HELPER FUNCTIONS************
