@@ -38,15 +38,12 @@ function draw() {
 
 
 function allDead() {
-  var output = true;
   for (var i = 0; i < particles.length; i++) {
-    if (particles[i].isDead == true) {
-      output = true;
-    }
-    else {
-      output = false;
+    if (particles[i].isDead == false) {
+      return false;
     }
   }
+  return true;
 
 }
 
