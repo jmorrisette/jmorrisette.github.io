@@ -16,18 +16,7 @@ function draw() {
   for (var i = 0; i < particles.length; i++) {
     var p = particles[i];
     p.move();
-    if (p.isDead) {
-      //source: http://stackoverflow.com/questions/16491758/remove-objects-from-array-by-object-property
-      //
-      // we have an array of objects called test,
-      // we want to remove one object using only the id property
-      // get index of object with id:2
-        //var removeIndex = test.map(function(item) { return item.id; }).indexOf(2);
-        // remove object
-        //test.splice(removeIndex, 1);
-        console.log("paticle #" + i + "died.");
-    }
-    else {
+    if (!p.isDead) {
       particles[i].display();
     }
   }
