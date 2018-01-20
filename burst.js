@@ -21,8 +21,8 @@ function particle(tempX,tempY,tempDiameter){
   this.x = tempX;
   this.y = tempY;
   this.diameter = tempDiameter;
-  this.xVelocity = 2.5;
-  this.yVelocity = 1;
+  var xVelocity = 2.5;
+  var yVelocity = 1;
 
 
   this.move = function(){
