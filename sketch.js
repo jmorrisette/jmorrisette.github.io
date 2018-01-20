@@ -9,8 +9,8 @@ var x;
 var y;
 var count;
 
-function p.setup() {
-  p.createCanvas(500,300);
+function setup() {
+  createCanvas(500,300);
   //u = int(width/15);
   u = 100;
   l = 20;
@@ -26,30 +26,30 @@ function p.setup() {
    }
 }
 
-function p.draw() {
+function draw() {
 
 
 
   if (mouseIsPressed) {
-    p.background(0);
-    p.stroke(255,163,163);
+    background(0);
+    stroke(255,163,163);
   } else {
-    p.background(255,163,163);
-    p.stroke(255);
+    background(255,163,163);
+    stroke(255);
   }
 
-  p.strokeWeight(15);
+  strokeWeight(15);
 
-  p.translate(20, 20);
+  translate(20, 20);
 
   for (var i = 0; i <= count; i++) {
-    mods[i].p.update();
-    mods[i].p.draw2();
+    mods[i].update();
+    mods[i].draw2();
   }
 
 }
 
-function p.Module(_x, _y) {
+function Module(_x, _y) {
   this.x = _x;
   this.y = _y;
   this.a = 0;
@@ -57,7 +57,7 @@ function p.Module(_x, _y) {
 
 }
 
-Module.prototype.p.update = function() {
+Module.prototype.update = function() {
   if (mouseIsPressed) {
     this.a = -20 * (atan2(mouseY-this.y, mouseX-this.x));
   } else {
@@ -65,7 +65,7 @@ Module.prototype.p.update = function() {
   }
 }
 
-Module.prototype.p.draw2 = function() {
+Module.prototype.draw2 = function() {
   push();
   translate(this.x, this.y);
   rotate(this.a);
@@ -73,11 +73,11 @@ Module.prototype.p.draw2 = function() {
   pop();
 }
 
-function p.windowResized() {
+function windowResized() {
   //resizeCanvas(windowWidth, windowHeight);
 }
 };
-var myp5 = new p5(m, 'magnets');
+var myp5_0 = new p5(m, 'magnets');
 
 
 //*************************************************************************
@@ -90,16 +90,16 @@ var particles = [];
 var numParticles = 100;
 
 
-function p.setup() {
-  p.createCanvas(500,300);
+function setup() {
+  createCanvas(500,300);
   for (var i = 0; i < numParticles; i++) {
-    temp = new particle(width/2, height/2, 10, p.getRandomVelocity(), p.getRandomVelocity());
+    temp = new particle(width/2, height/2, 10, getRandomVelocity(), getRandomVelocity());
     particles.push(temp);
   }
 }
 
-function p.draw() {
-  p.background(color(0,0,0));
+function draw() {
+  background(color(0,0,0));
   for (var i = 0; i < particles.length; i++) {
     var p = particles[i];
     p.move();
@@ -107,13 +107,13 @@ function p.draw() {
       particles[i].display();
     }
   }
-  if (p.allDead(particles)) {
-    p.boom();
+  if (allDead(particles)) {
+    boom();
   }
 }
 
 //check to see if each particle in the particles array isDead
-function p.allDead(particlesToCheck) {
+function allDead(particlesToCheck) {
   for (var i = 0; i < particlesToCheck.length; i++) {
     if (particlesToCheck[i].isDead == false) {
       return false;
@@ -123,10 +123,10 @@ function p.allDead(particlesToCheck) {
 }
 
 //initialize a new list of particles
-function p.boom() {
+function boom() {
   particles = new Array();
   for (var i = 0; i < numParticles; i++) {
-    temp = new p.particle(width/2, height/2, 10, p.getRandomVelocity(), p.getRandomVelocity());
+    temp = new particle(width/2, height/2, 10, getRandomVelocity(), getRandomVelocity());
     particles.push(temp);
   }
 }
@@ -136,7 +136,7 @@ function p.boom() {
 
 //CLASSES***********************
 //particle class
-function p.particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
+function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
   this.x = tempX;
   this.y = tempY;
   this.diameter = tempDiameter;
@@ -164,7 +164,7 @@ function p.particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
 }
 
 //helper function used when initializing a new particle
-function p.getRandomVelocity() {
+function getRandomVelocity() {
   var a = Math.random()*2;
   var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
   var result = a*plusOrMinus;
@@ -173,7 +173,7 @@ function p.getRandomVelocity() {
 //END CLASSES*******************
 
 };
-var myp5 = new p5(b, 'burst');
+var myp5_1 = new p5(b, 'burst');
 //*************************************************************************
 //*************************************************************************
 //*************************************************************************
