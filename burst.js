@@ -41,6 +41,9 @@ function allDead(particleArray) {
   var output = true;
   for (var i = 0; i < particleArray.length; i++) {
     if (particleArray[i].isDead) {
+      output = true;
+    }
+    else {
       output = false;
     }
   }
