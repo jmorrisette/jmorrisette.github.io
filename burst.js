@@ -32,7 +32,7 @@ function draw() {
     }
   }
   if (allDead(particles)) {
-    particles = [];
+    particles = new Array();
   }
 }
 
