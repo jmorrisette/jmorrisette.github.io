@@ -76,7 +76,7 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
 
 
   this.display = function(){
-    fill(color(this.hp, this.hp, this.hp));
+    fill(color(200, this.hp, this.hp,this.hp));
     ellipse(this.x,this.y,this.diameter,this.diameter);
 		// for (var i = 0; i < this.twinkles.lenth; i++) {
 		// 	this.twinkles[i].move();
