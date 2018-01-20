@@ -10,12 +10,13 @@ function getRandomVelocity() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(color(0,0,0));
+  
 
   p = new particle(width/2, height/2, 20, getRandomVelocity(), getRandomVelocity());
 }
 
 function draw() {
+  background(color(0,0,0));
   p.move();
   p.display();
 
