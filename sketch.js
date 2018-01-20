@@ -56,13 +56,13 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
   this.xVelocity = tempXVelocity;
   this.yVelocity = tempYVelocity;
   this.isDead = false;
-	this.twinkles = new Array();
+	// this.twinkles = new Array();
   this.hp = 255;
-
-	for (var i = 0; i < 30; i++) {
-		temp = new twinkle(this.x,this.y,this);
-		this.twinkles.push(temp);
-	}
+  //
+	// for (var i = 0; i < 30; i++) {
+	// 	temp = new twinkle(this.x,this.y,this);
+	// 	this.twinkles.push(temp);
+	// }
 
   this.move = function(){
     this.x += this.xVelocity;
@@ -78,49 +78,49 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
   this.display = function(){
     fill(color(this.hp, this.hp, this.hp));
     ellipse(this.x,this.y,this.diameter,this.diameter);
-		for (var i = 0; i < this.twinkles.lenth; i++) {
-			this.twinkles[i].move();
-			this.twinkles[i].display();
-		}
+		// for (var i = 0; i < this.twinkles.lenth; i++) {
+		// 	this.twinkles[i].move();
+		// 	this.twinkles[i].display();
+		// }
   }
 
 
 }//END paricle class
 
-//twinkle class
-function twinkle(xloc, yloc,paricle) {
-  this.x = xloc;
-  this.y = yloc;
-  this.p = particle;
-	this.xVelocity = getRandomVelocity(2);
-  this.yVelocity = getRandomVelocity(2);
-  this.isDead = false;
-  //hitpoints
-  this.hp = 100;
-
-	this.move = function(){
-    this.x += this.xVelocity;
-    this.y += this.yVelocity;
-    this.hp ++;
-  }
-
-
-	this.display = function(){
-    fill(color(255, 0, 0));
-    ellipse(this.xloc,this.yloc,5,5);
-  }
-}//END twinkle class
-
-//END CLASSES*******************
-
-//HELPER FUCNTIONS***************
-
-//returns random number from -num to num
-function getRandomVelocity(num) {
-	var a = Math.random()*num;
-	var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
-	var result = a*plusOrMinus;
-	return result;
-}
-
-//END HELPER FUNCTIONS************
+// //twinkle class
+// function twinkle(xloc, yloc,paricle) {
+//   this.x = xloc;
+//   this.y = yloc;
+//   this.p = particle;
+// 	this.xVelocity = getRandomVelocity(2);
+//   this.yVelocity = getRandomVelocity(2);
+//   this.isDead = false;
+//   //hitpoints
+//   this.hp = 100;
+//
+// 	this.move = function(){
+//     this.x += this.xVelocity;
+//     this.y += this.yVelocity;
+//     this.hp ++;
+//   }
+//
+//
+// 	this.display = function(){
+//     fill(color(255, 0, 0));
+//     ellipse(this.xloc,this.yloc,5,5);
+//   }
+// }//END twinkle class
+//
+// //END CLASSES*******************
+//
+// //HELPER FUCNTIONS***************
+//
+// //returns random number from -num to num
+// function getRandomVelocity(num) {
+// 	var a = Math.random()*num;
+// 	var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
+// 	var result = a*plusOrMinus;
+// 	return result;
+// }
+//
+// //END HELPER FUNCTIONS************
