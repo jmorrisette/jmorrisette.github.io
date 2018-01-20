@@ -79,6 +79,7 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
     fill(color(this.hp, this.hp, this.hp));
     ellipse(this.x,this.y,this.diameter,this.diameter);
 		for (var i = 0; i < this.twinkles.lenth; i++) {
+			this.twinkles[i].move();
 			this.twinkles[i].display();
 		}
   }
@@ -109,7 +110,7 @@ function twinkle(xloc, yloc,paricle) {
 
 
 	this.display = function(){
-    fill(color(this.hp, this.hp, this.hp));
+    fill(color(255, 0, 0));
     ellipse(this.xloc,this.yloc,5,5);
   }
 }//END twinkle class
