@@ -31,15 +31,15 @@ function draw() {
       particles[i].display();
     }
   }
-  if (allDead()) {
+  if (allDead(particles)) {
     particles = new Array();
   }
 }
 
 
-function allDead() {
-  for (var i = 0; i < particles.length; i++) {
-    if (particles[i].isDead == false) {
+function allDead(particlesToCheck) {
+  for (var i = 0; i < particlesToCheck.length; i++) {
+    if (particlesToCheck[i].isDead == false) {
       return false;
     }
   }
