@@ -7,7 +7,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   for (var i = 0; i < numParticles; i++) {
     temp = new particle(width/2, height/2, 10, getRandomVelocity(), getRandomVelocity());
-    particles.add(temp);
+    particles.push(temp);
   }
 }
 
