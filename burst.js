@@ -36,6 +36,19 @@ function draw() {
   }
 }
 
+
+function allDead(var particleArray) {
+  var output = true;
+  for (var i = 0; i < particleArray.length, i++) {
+    if (!particleArray[i].isDead) {
+      output = false;
+    }
+  }
+}
+
+
+
+
 //CLASSES***********************
 //particle class
 function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
