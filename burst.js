@@ -39,7 +39,7 @@ function draw() {
 
 function allDead(particleArray) {
   var output = true;
-  for (var i = 0; i < particleArray.length, i++) {
+  for (var i = 0; i < particleArray.length; i++) {
     if (!particleArray[i].isDead) {
       output = false;
     }
