@@ -78,18 +78,11 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
   this.display = function(){
     fill(color(this.hp, this.hp, this.hp));
     ellipse(this.x,this.y,this.diameter,this.diameter);
-		for (var i = 0; i < twinkles.lenth; i++) {
-			twinkles[i].display();
+		for (var i = 0; i < this.twinkles.lenth; i++) {
+			this.twinkles[i].display();
 		}
   }
 
-	//helper function used to initialize twinkles
-	function initTwinkles() {
-		for (var i = 0; i < 3; i++) {
-			temp = new twinkle(this.x,this.y,this);
-			twinkles.push(temp);
-		}
-	}
 
 }//END paricle class
 
