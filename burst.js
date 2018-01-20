@@ -31,16 +31,16 @@ function draw() {
       particles[i].display();
     }
   }
-  if (allDead(particles)) {
+  if (allDead()) {
     particles = new Array();
   }
 }
 
 
-function allDead(particleArray) {
+function allDead() {
   var output = true;
-  for (var i = 0; i < particleArray.length; i++) {
-    if (particleArray[i].isDead) {
+  for (var i = 0; i < particles.length; i++) {
+    if (particles[i].isDead) {
       output = true;
     }
     else {
