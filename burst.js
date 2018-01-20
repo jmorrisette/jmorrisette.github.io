@@ -1,6 +1,6 @@
 
 var particles = [];
-var numParticles = 10;
+var numParticles = 100;
 
 
 function setup() {
@@ -36,7 +36,7 @@ function draw() {
   }
 }
 
-
+//check to see if each particle in the particles array isDead
 function allDead(particlesToCheck) {
   for (var i = 0; i < particlesToCheck.length; i++) {
     if (particlesToCheck[i].isDead == false) {
