@@ -45,6 +45,7 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
   this.isDead = false;
   //hitpoints
   this.hp = 255;
+
   this.move = function(){
     this.x += this.xVelocity;
     this.y += this.yVelocity;
@@ -53,12 +54,13 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
     if (lifespan <= 0) {
       this.isDead = true;
     };
+  }
 
 
   this.display = function(){
     fill(color(lifespan, lifespan, lifespan));
     ellipse(this.x,this.y,this.diameter,this.diameter);
-  };
+  }
 }
 
 //helper function used when initializing a new particle
