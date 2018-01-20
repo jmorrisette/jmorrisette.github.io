@@ -58,7 +58,7 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
 
 
   this.display = function(){
-    fill(color(lifespan, lifespan, lifespan));
+    fill(color(this.hp, this.hp, this.hp));
     ellipse(this.x,this.y,this.diameter,this.diameter);
   }
 }
