@@ -6,7 +6,7 @@ var numParticles = 100;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   for (var i = 0; i < numParticles; i++) {
-    temp = new particle(width/2, height/2, 10, getRandomVelocity(), getRandomVelocity());
+    temp = new particle(width/2, height/2, 10, getRandomVelocity(2), getRandomVelocity(2));
     particles.push(temp);
   }
 }
@@ -91,8 +91,8 @@ function twinkle(xloc, yloc,paricle) {
   this.xloc = xloc;
   this.yloc = yloc;
   this.p = particle;
-	this.xVelocity = this.p.xVelocity;
-  this.yVelocity = this.p.yVelocity;
+	this.xVelocity = getRandomVelocity(2);
+  this.yVelocity = getRandomVelocity(2);
   this.isDead = false;
   //hitpoints
   this.hp = 100;
@@ -118,9 +118,9 @@ function twinkle(xloc, yloc,paricle) {
 
 //HELPER FUCNTIONS***************
 
-//helper function used when initializing a new particle
-function getRandomVelocity() {
-	var a = Math.random()*2;
+//returns random number from -num to num
+function getRandomVelocity(num) {
+	var a = Math.random()*num;
 	var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
 	var result = a*plusOrMinus;
 	return result;
