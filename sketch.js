@@ -113,14 +113,14 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
 //
 // //END CLASSES*******************
 //
-// //HELPER FUCNTIONS***************
-//
-// //returns random number from -num to num
-// function getRandomVelocity(num) {
-// 	var a = Math.random()*num;
-// 	var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
-// 	var result = a*plusOrMinus;
-// 	return result;
-// }
-//
-// //END HELPER FUNCTIONS************
+//HELPER FUCNTIONS***************
+
+//returns random number from -num to num
+function getRandomVelocity(num) {
+	var a = Math.random()*num;
+	var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
+	var result = a*plusOrMinus;
+	return result;
+}
+
+//END HELPER FUNCTIONS************
