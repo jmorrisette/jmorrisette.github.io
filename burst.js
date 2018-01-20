@@ -22,9 +22,10 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
   this.diameter = tempDiameter;
   this.xVelocity = tempXVelocity;
   this.yVelocity = tempYVelocity;
+
   this.move = function(){
-    this.x += xVelocity;
-    this.y += yVelocity;
+    this.x += this.xVelocity;
+    this.y += this.yVelocity;
   };
   this.display = function(){
     ellipse(this.x,this.y,this.diameter,this.diameter);
