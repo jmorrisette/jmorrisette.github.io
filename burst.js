@@ -26,11 +26,13 @@ function draw() {
         // remove object
         //test.splice(removeIndex, 1);
         console.log("paticle #" + i + "died.");
-
     }
     else {
       particles[i].display();
     }
+  }
+  if (allDead(particles)) {
+    particles = [];
   }
 }
 
