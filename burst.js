@@ -44,7 +44,7 @@ function allDead() {
       output = true;
     }
     else {
-
+      output = false;
     }
   }
 
