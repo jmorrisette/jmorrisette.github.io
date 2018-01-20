@@ -89,8 +89,8 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
 
 //twinkle class
 function twinkle(xloc, yloc,paricle) {
-  this.xloc = xloc;
-  this.yloc = yloc;
+  this.x = xloc;
+  this.y = yloc;
   this.p = particle;
 	this.xVelocity = getRandomVelocity(2);
   this.yVelocity = getRandomVelocity(2);
@@ -102,10 +102,6 @@ function twinkle(xloc, yloc,paricle) {
     this.x += this.xVelocity;
     this.y += this.yVelocity;
     this.hp ++;
-
-    if (this.hp <= 0) {
-      this.isDead = true;
-    };
   }
 
 
