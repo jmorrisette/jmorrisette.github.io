@@ -85,7 +85,8 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
     fill(color(this.hp, this.hp, this.hp));
     ellipse(this.x,this.y,this.diameter,this.diameter);
     for (var i = 0; i < myParticles.length; i++) {
-      myParticles[i].display();
+      fill(color(255));
+      ellipse(myParticles[i].x, myParticles[i].y, 5, 5);
 
   }
 }
