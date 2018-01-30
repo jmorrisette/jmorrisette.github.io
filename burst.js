@@ -71,7 +71,7 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
     this.y += this.yVelocity;
     this.hp --;
 
-    if (this.hp == 100) {
+    if (this.hp >= 100) {
       temp = new particle(this.x, this.y, 10, getRandomVelocity(), getRandomVelocity());
       myParticles.push(temp);
     }
