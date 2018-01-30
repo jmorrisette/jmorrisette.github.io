@@ -44,6 +44,10 @@ function boom() {
   }
 }
 
+function bang() {
+
+}
+
 
 
 
@@ -56,6 +60,9 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
   this.xVelocity = tempXVelocity;
   this.yVelocity = tempYVelocity;
   this.isDead = false;
+
+  this.myParticles = [];
+
   //hitpoints
   this.hp = 255;
 
@@ -64,6 +71,10 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
     this.y += this.yVelocity;
     this.hp --;
 
+    if (this.hp == 100) {
+      temp = new particle(this.x, this.y, 10, getRandomVelocity(), getRandomVelocity());
+      particles.push(temp);
+    }
     if (this.hp <= 0) {
       this.isDead = true;
     };
@@ -73,6 +84,9 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
   this.display = function(){
     fill(color(this.hp, this.hp, this.hp));
     ellipse(this.x,this.y,this.diameter,this.diameter);
+    for (var i = 0; i < 10; i++) {
+
+    }
   }
 }
 
