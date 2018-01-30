@@ -73,7 +73,7 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
 
     if (this.hp == 100) {
       temp = new particle(this.x, this.y, 10, getRandomVelocity(), getRandomVelocity());
-      particles.push(temp);
+      myParticles.push(temp);
     }
     if (this.hp <= 0) {
       this.isDead = true;
@@ -84,9 +84,9 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
   this.display = function(){
     fill(color(this.hp, this.hp, this.hp));
     ellipse(this.x,this.y,this.diameter,this.diameter);
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < myParticles.length; i++) {
+      myParticles[i].display();
 
-    }
   }
 }
 
