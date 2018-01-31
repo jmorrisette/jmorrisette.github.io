@@ -22,7 +22,6 @@ function draw() {
   }
   if (allDead(particles)) {
     boom();
-    bang();
   }
 }
 
@@ -40,7 +39,7 @@ function allDead(particlesToCheck) {
 function boom() {
   particles = new Array();
   for (var i = 0; i < numParticles; i++) {
-    temp = new particle(width/2, height/2, 10, getRandomVelocity(), getRandomVelocity());
+    temp = new particle(random(windowWith), height/2, 10, getRandomVelocity(), getRandomVelocity());
     particles.push(temp);
   }
 }
