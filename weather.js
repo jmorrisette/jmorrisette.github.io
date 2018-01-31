@@ -1,4 +1,4 @@
-
+//BASED ON CODE FOUND AT: https://p5js.org/examples/hello-p5-weather.html
 // A wind direction vector
 var wind;
 // Circle position
