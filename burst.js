@@ -74,10 +74,6 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
     this.y += this.yVelocity;
     this.hp --;
 
-    if (this.hp >= 100) {
-      temp = new particle(this.x, this.y, 10, getRandomVelocity(), getRandomVelocity());
-      myParticles.push(temp);
-    }
     if (this.hp <= 0) {
       this.isDead = true;
     };
@@ -87,11 +83,6 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
   this.display = function(){
     fill(color(this.hp, this.hp, this.hp));
     ellipse(this.x,this.y,this.diameter,this.diameter);
-    for (var i = 0; i < myParticles.length; i++) {
-      fill(color(255));
-      ellipse(myParticles[i].x, myParticles[i].y, 5, 5);
-
-  }
 }
 
 //helper function used when initializing a new particle
