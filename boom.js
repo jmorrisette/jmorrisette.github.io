@@ -1,6 +1,6 @@
 
 var particles = [];
-var maxParticles = 100;
+var maxParticles = 1000;
 function setup() {
   createCanvas(windowWidth, windowHeight);
 }
@@ -14,6 +14,10 @@ function draw() {
   for (var i = 0; i < particles.length; i++) {
     if (particles[i].hp < 1) {
       particles.splice(i,1);
+    }
+
+    if (mouseIsPressed) {
+      spawnParticle(mouseX, mouseY);
     }
   }
 
@@ -54,7 +58,7 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
 
 
   this.display = function(){
-    fill(color(this.hp,0,0));
+    fill(color(this.hp,this.hp,this.y/3, this.hp));
     ellipse(this.x,this.y,this.diameter,this.diameter);
   }
 

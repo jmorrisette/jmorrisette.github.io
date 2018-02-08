@@ -7,6 +7,7 @@ var position;
 function setup() {
   createCanvas(720, 200);
   // Request the data from apixu.com
+  var dadJokeURL = 'https://icanhazdadjoke.com/'
   var url = 'https://api.apixu.com/v1/current.json?key=513d8003c8b348f1a2461629162106&q=NYC';
   loadJSON(url, gotWeather);
   // Circle starts in the middle
