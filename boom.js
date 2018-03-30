@@ -15,10 +15,10 @@ function draw() {
     if (particles[i].hp < 1) {
       particles.splice(i,1);
     }
+  }
 
-    if (mouseIsPressed) {
-      spawnParticle(mouseX, mouseY);
-    }
+  while (mousePressed()) {
+    spawnParticle(mouseX, mouseY);
   }
 
   updateParticles();
@@ -58,7 +58,7 @@ function particle(tempX, tempY, tempDiameter, tempXVelocity, tempYVelocity){
 
 
   this.display = function(){
-    fill(color(this.hp,this.hp,this.y/3, this.hp));
+    fill(color(this.hp,this.hp/2,0, this.hp));
     ellipse(this.x,this.y,this.diameter,this.diameter);
   }
 
