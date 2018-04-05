@@ -13,7 +13,7 @@ var amp;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  song = loadSound("stonersNight.mp3", songLoaded);
+  song = loadSound("LucidTruth.mp3", songLoaded);
   amp = new p5.Amplitude();
   sliderVol = createSlider(0, 1, 0.5, 0.01);
   sliderVol.position(10,10);
