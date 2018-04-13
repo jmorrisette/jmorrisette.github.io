@@ -3,6 +3,9 @@ var sliderVol;
 var sliderRate;
 var sliderPan;
 var amp;
+var fft;
+
+
 
 //this function is for things that need to happen BEFORE setup
 //loading files, images, etc.
@@ -13,8 +16,10 @@ var amp;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  song = loadSound("LucidTruth.mp3", songLoaded);
+  song = loadSound("StonersNight.mp3", songLoaded);
   amp = new p5.Amplitude();
+
+  fft = new p5.FFT(0,256);
   sliderVol = createSlider(0, 1, 0.5, 0.01);
   sliderVol.position(10,10);
   //sliderPan = createSlider(0, 1, 0.5, 0.01);
@@ -37,6 +42,7 @@ function draw() {
 
   var tempVol = amp.getLevel();
   var diam = map(tempVol, 0, 1, 10, 200);
-  ellipse(width/2, height/2, diam , diam);
+  //ellipse(width/2, height/2, diam , diam);
+  var specturm = fft.analyze();
 
 }
