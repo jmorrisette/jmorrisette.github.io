@@ -16,7 +16,7 @@ var fft;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  song = loadSound("StonersNight.mp3", songLoaded);
+  song = loadSound("stonersNight.mp3", songLoaded);
   amp = new p5.Amplitude();
 
   fft = new p5.FFT(0,256);
