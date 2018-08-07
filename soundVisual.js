@@ -83,6 +83,7 @@ function draw() {
     particle(posX, posY, 20, random(-3,3), random(-2,2));
   }
   update();
+  updateParticles();
   displayParticles();
 }
 
@@ -95,6 +96,7 @@ function update() {
     velY*=-1;
     posY += 10*velY;
   }
+
   posX += velX;
   posY += velY;
 }
