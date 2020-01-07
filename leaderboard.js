@@ -86,7 +86,7 @@ var list = [
   },
   {
     "Place": 8,
-    "Owner": "Andrew Baker",
+    "Owner": "Andrew  Baker",
     "Team ID": 2,
     "Total Points": 31.02
   }
