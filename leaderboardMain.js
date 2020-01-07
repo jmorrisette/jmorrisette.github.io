@@ -31,19 +31,19 @@ var list = [
     "Total Points": 67.5
   },
   {
-    "Place": 7,
+    "Place": 6,
     "Owner": "Jake Wahlin",
     "Team ID": 9,
     "Total Points": 62.5
   },
   {
-    "Place": 6,
+    "Place": 7,
     "Owner": "Joe Nasvik",
     "Team ID": 15,
     "Total Points": 61.9
   },
   {
-    "Place": 10,
+    "Place": 8,
     "Owner": "Gage Grace",
     "Team ID": 7,
     "Total Points": 54.2
@@ -55,38 +55,38 @@ var list = [
     "Total Points": 53.6
   },
   {
-    "Place": 11,
+    "Place": 10,
     "Owner": "Ryan Phillips",
     "Team ID": 14,
     "Total Points": 48.6
   },
   {
-    "Place": 12,
+    "Place": 11,
     "Owner": "Mike Harris",
     "Team ID": 3,
     "Total Points": 48
   },
   {
-    "Place": 13,
+    "Place": 12,
     "Owner": "Nick Wieland",
     "Team ID": 1,
     "Total Points": 45.4
   },
   {
-    "Place": 14,
+    "Place": 13,
     "Owner": "Jack Morrisette",
     "Team ID": 11,
     "Total Points": 45.2
   },
   {
-    "Place": 15,
+    "Place": 14,
     "Owner": "Josh Bartness",
     "Team ID": 13,
     "Total Points": 36.4
   },
   {
-    "Place": 8,
-    "Owner": "Andrew  Baker",
+    "Place": 15,
+    "Owner": "Andrew Baker",
     "Team ID": 2,
     "Total Points": 31.02
   }
