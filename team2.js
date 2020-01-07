@@ -11,12 +11,12 @@ var team =
   },
   {
     "Position": "RB",
-    "Player Name": "Derrick Henry",
-    "Week 1": 26.4,
+    "Player Name": "Aaron Jones",
+    "Week 1": 0,
     "Week 2": "",
     "Week 3": "",
     "Week 4": "",
-    "Player Total": 26.4
+    "Player Total": 0
   },
   {
     "Position": "RB",
@@ -79,6 +79,6 @@ var team =
     "Week 2": "",
     "Week 3": "",
     "Week 4": "Team Total",
-    "Player Total": 57.42
+    "Player Total": 31.02
   }
 ];

@@ -2,16 +2,7 @@ var team =
 [
   {
     "Position": "QB",
-    "Player Name": "Patrick Mahomes",
-    "Week 1": 0,
-    "Week 2": 0,
-    "Week 3": 0,
-    "Week 4": 0,
-    "Player Total": 0
-  },
-  {
-    "Position": "RB",
-    "Player Name": "Mark Ingram",
+    "Player Name": "Lamar Jackson",
     "Week 1": 0,
     "Week 2": "",
     "Week 3": "",
@@ -28,13 +19,22 @@ var team =
     "Player Total": 0
   },
   {
-    "Position": "WR",
-    "Player Name": "DeAndre Hopkins",
-    "Week 1": 9,
+    "Position": "RB",
+    "Player Name": "Derrick Henry",
+    "Week 1": 26.4,
     "Week 2": "",
     "Week 3": "",
     "Week 4": "",
-    "Player Total": 9
+    "Player Total": 26.4
+  },
+  {
+    "Position": "WR",
+    "Player Name": "Tyreek Hill",
+    "Week 1": 0,
+    "Week 2": 0,
+    "Week 3": 0,
+    "Week 4": 0,
+    "Player Total": 0
   },
   {
     "Position": "WR",
@@ -47,12 +47,12 @@ var team =
   },
   {
     "Position": "FLEX",
-    "Player Name": "DK Metcalf",
-    "Week 1": 22,
-    "Week 2": 0,
-    "Week 3": 0,
-    "Week 4": 0,
-    "Player Total": 22
+    "Player Name": "Julian Edelman",
+    "Week 1": 10.2,
+    "Week 2": "",
+    "Week 3": "",
+    "Week 4": "",
+    "Player Total": 10.2
   },
   {
     "Position": "TE",
@@ -65,12 +65,12 @@ var team =
   },
   {
     "Position": "K",
-    "Player Name": "Jake Elliot",
-    "Week 1": 10,
+    "Player Name": "Jason Myres",
+    "Week 1": 5,
     "Week 2": 0,
     "Week 3": 0,
     "Week 4": 0,
-    "Player Total": 10
+    "Player Total": 5
   },
   {
     "Position": "",
@@ -79,6 +79,6 @@ var team =
     "Week 2": "",
     "Week 3": "",
     "Week 4": "Team Total",
-    "Player Total": 48
+    "Player Total": 48.6
   }
 ];

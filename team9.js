@@ -2,12 +2,21 @@ var team =
 [
   {
     "Position": "QB",
-    "Player Name": "Patrick Mahomes",
-    "Week 1": 0,
-    "Week 2": 0,
-    "Week 3": 0,
-    "Week 4": 0,
-    "Player Total": 0
+    "Player Name": "Russell Wilson",
+    "Week 1": 21.5,
+    "Week 2": "",
+    "Week 3": "",
+    "Week 4": "",
+    "Player Total": 21.5
+  },
+  {
+    "Position": "RB",
+    "Player Name": "Dalvin Cook",
+    "Week 1": 25,
+    "Week 2": "",
+    "Week 3": "",
+    "Week 4": "",
+    "Player Total": 25
   },
   {
     "Position": "RB",
@@ -19,21 +28,12 @@ var team =
     "Player Total": 0
   },
   {
-    "Position": "RB",
-    "Player Name": "Aaron Jones",
-    "Week 1": 0,
-    "Week 2": "",
-    "Week 3": "",
-    "Week 4": "",
-    "Player Total": 0
-  },
-  {
     "Position": "WR",
     "Player Name": "DeAndre Hopkins",
     "Week 1": 9,
-    "Week 2": "",
-    "Week 3": "",
-    "Week 4": "",
+    "Week 2": 0,
+    "Week 3": 0,
+    "Week 4": 0,
     "Player Total": 9
   },
   {
@@ -47,16 +47,16 @@ var team =
   },
   {
     "Position": "FLEX",
-    "Player Name": "DK Metcalf",
-    "Week 1": 22,
-    "Week 2": 0,
-    "Week 3": 0,
-    "Week 4": 0,
-    "Player Total": 22
+    "Player Name": "Aaron Jones",
+    "Week 1": 0,
+    "Week 2": "",
+    "Week 3": "",
+    "Week 4": "",
+    "Player Total": 0
   },
   {
     "Position": "TE",
-    "Player Name": "George Kittle",
+    "Player Name": "Travis Kelce",
     "Week 1": 0,
     "Week 2": "",
     "Week 3": "",
@@ -65,12 +65,12 @@ var team =
   },
   {
     "Position": "K",
-    "Player Name": "Jake Elliot",
-    "Week 1": 10,
+    "Player Name": "Robbie Gould",
+    "Week 1": 0,
     "Week 2": 0,
     "Week 3": 0,
     "Week 4": 0,
-    "Player Total": 10
+    "Player Total": 0
   },
   {
     "Position": "",
@@ -79,6 +79,6 @@ var team =
     "Week 2": "",
     "Week 3": "",
     "Week 4": "Team Total",
-    "Player Total": 48
+    "Player Total": 62.5
   }
 ];
