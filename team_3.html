@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Page Title</title>
+  <title>Playoff Challenge</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -13,14 +13,14 @@
 <body>
 
   <div class="container p-3 my-3 bg-dark text-white">
-    <h1 align="center">Playoff Challenge</h1>
+    <h1 align="center">Team 3: Mike Harris</h1>
 
     <ul class="nav justify-content-center">
       <li class="nav-item">
-        <a class="nav-link" href="allRosters.html">All Rosters</a>
+        <a class="nav-link" href="index.html">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="allRosters.html">All Rosters</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
@@ -50,18 +50,18 @@
         </div>
       </li>
     </ul>
-
-
-
     <br/>
 
     <table id="basicTable" class="table table-dark">
     <thead>
       <tr>
-        <th>Place</th>
-        <th>Owner</th>
-        <th>Team ID</th>
-        <th>Points</th>
+        <th>Position</th>
+        <th>Player Name</th>
+        <th>Week 1</th>
+        <th>Week 2</th>
+        <th>Week 3</th>
+        <th>Week 4</th>
+        <th>Player Total</th>
       </tr>
     </thead>
     <tbody>
@@ -70,46 +70,41 @@
         <td>2</td>
         <td>3</td>
         <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
       </tr>
     </tbody>
     </table>
 
     <p>Last Updated: 1/7/2020</p>
 
-  <br/>
-    </div>
-<!--
 
+    <p>If you have any questions or see any errors let me know asap.</p>
+    <br/>
+    <br/>
+    <p>*If you have an iPhone you might have issues viewing the rosters in the browser.
+      Try downloading it with the link in the bottom right corner of the spreadsheet.
+    </p>
 
-    <a href="team_3.html">test</a>
-    <a href="team_4.html">test</a>
-    <a href="team_5.html">test</a>
-    <a href="team_6.html">test</a>
-    <a href="team_7.html">test</a>
-    <a href="team_8.html">test</a>
-    <a href="team_9.html">test</a>
-
-    -->
   </div>
 
 
-<!--
-<script type="text/javascript" src="myScript.js"></script>
-  -->
-<script type="text/javascript" src="leaderboard.js"></script>
+  <script type="text/javascript" src="team3.js"></script>
 
-<script>
-  $(document).ready(function()
-  {
-  	var jsonTable = new JSONTable($("#basicTable"))
-  	var tableData = jsonTable.toJSON()
-    for (var i = 0; i < list.length; i++) {
-      tableData[i] = list[i];
-    }
-    jsonTable.fromJSON(tableData)
-  })
-</script>
+  <script>
+    $(document).ready(function()
+    {
+    	var jsonTable = new JSONTable($("#basicTable"))
+    	var tableData = jsonTable.toJSON()
+      for (var i = 0; i < team.length; i++) {
+        tableData[i] = team[i];
+      }
+      jsonTable.fromJSON(tableData)
+    })
+  </script>
 
 
 </body>
+
 </html>
