@@ -3,91 +3,76 @@ var list = [
   {
     "Place": 1,
     "Owner": "Mitch Morrisette",
-    "Team ID": 10,
-    "Total Points": 83.6
+    "Total Points": 199.22
   },
   {
     "Place": 2,
-    "Owner": "RJ Majkozak",
-    "Team ID": 12,
-    "Total Points": 78.8
+    "Owner": "Brandon Wahlin",
+    "Total Points": 173.7
   },
   {
     "Place": 3,
-    "Owner": "Seth King",
-    "Team ID": 6,
-    "Total Points": 75.7
+    "Owner": "Jake Wahlin",
+    "Total Points": 160.48
   },
   {
     "Place": 4,
-    "Owner": "Zac Houle",
-    "Team ID": 4,
-    "Total Points": 68.6
+    "Owner": "Seth King",
+    "Total Points": 154.3
   },
   {
     "Place": 5,
-    "Owner": "Brandon Wahlin",
-    "Team ID": 8,
-    "Total Points": 67.5
+    "Owner": "RJ Majkozak",
+    "Total Points": 148.52
   },
   {
     "Place": 6,
-    "Owner": "Jake Wahlin",
-    "Team ID": 9,
-    "Total Points": 62.5
+    "Owner": "Josh Bartness",
+    "Total Points": 142.7
   },
   {
     "Place": 7,
-    "Owner": "Joe Nasvik",
-    "Team ID": 15,
-    "Total Points": 61.9
+    "Owner": "Zac Houle",
+    "Total Points": 142.36
   },
   {
     "Place": 8,
-    "Owner": "Gage Grace",
-    "Team ID": 7,
-    "Total Points": 54.2
+    "Owner": "Joe Nasvik",
+    "Total Points": 135.1
   },
   {
     "Place": 9,
-    "Owner": "Dave Leo",
-    "Team ID": 5,
-    "Total Points": 53.6
+    "Owner": "Gage Grace",
+    "Total Points": 131.04
   },
   {
     "Place": 10,
-    "Owner": "Ryan Phillips",
-    "Team ID": 14,
-    "Total Points": 48.6
+    "Owner": "Dave Leo",
+    "Total Points": 129.12
   },
   {
     "Place": 11,
-    "Owner": "Mike Harris",
-    "Team ID": 3,
-    "Total Points": 48
+    "Owner": "Ryan Phillips",
+    "Total Points": 129.12
   },
   {
     "Place": 12,
-    "Owner": "Nick Wieland",
-    "Team ID": 1,
-    "Total Points": 45.4
+    "Owner": "Mike Harris",
+    "Total Points": 127.14
   },
   {
     "Place": 13,
-    "Owner": "Jack Morrisette",
-    "Team ID": 11,
-    "Total Points": 45.2
+    "Owner": "Nick Wieland",
+    "Total Points": 120.92
   },
   {
     "Place": 14,
-    "Owner": "Josh Bartness",
-    "Team ID": 13,
-    "Total Points": 36.4
+    "Owner": "Jack Morrisette",
+    "Total Points": 118.6
   },
   {
     "Place": 15,
     "Owner": "Andrew Baker",
-    "Team ID": 2,
-    "Total Points": 31.02
+    "Total Points": 89.82
   }
 ];

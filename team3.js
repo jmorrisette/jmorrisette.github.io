@@ -4,64 +4,64 @@ var team =
     "Position": "QB",
     "Player Name": "Patrick Mahomes",
     "Week 1": 0,
-    "Week 2": 0,
-    "Week 3": 0,
-    "Week 4": 0,
-    "Player Total": 0
+    "Week 2": 38.14,
+    "Week 3": "",
+    "Week 4": "",
+    "Player Total": 38.14
   },
   {
     "Position": "RB",
     "Player Name": "Mark Ingram",
     "Week 1": 0,
-    "Week 2": "",
-    "Week 3": "",
-    "Week 4": "",
-    "Player Total": 0
+    "Week 2": 3.1,
+    "Week 3": 0,
+    "Week 4": 0,
+    "Player Total": 3.1
   },
   {
     "Position": "RB",
     "Player Name": "Aaron Jones",
     "Week 1": 0,
-    "Week 2": "",
+    "Week 2": 18.6,
     "Week 3": "",
     "Week 4": "",
-    "Player Total": 0
+    "Player Total": 18.6
   },
   {
     "Position": "WR",
     "Player Name": "DeAndre Hopkins",
     "Week 1": 9,
-    "Week 2": "",
-    "Week 3": "",
-    "Week 4": "",
-    "Player Total": 9
+    "Week 2": 11.8,
+    "Week 3": 0,
+    "Week 4": 0,
+    "Player Total": 20.8
   },
   {
     "Position": "WR",
     "Player Name": "Michael Thomas",
     "Week 1": 7,
-    "Week 2": "",
-    "Week 3": "",
-    "Week 4": "",
+    "Week 2": 0,
+    "Week 3": 0,
+    "Week 4": 0,
     "Player Total": 7
   },
   {
     "Position": "FLEX",
     "Player Name": "DK Metcalf",
     "Week 1": 22,
-    "Week 2": 0,
+    "Week 2": 5.9,
     "Week 3": 0,
     "Week 4": 0,
-    "Player Total": 22
+    "Player Total": 27.9
   },
   {
     "Position": "TE",
     "Player Name": "George Kittle",
     "Week 1": 0,
-    "Week 2": "",
+    "Week 2": 1.6,
     "Week 3": "",
     "Week 4": "",
-    "Player Total": 0
+    "Player Total": 1.6
   },
   {
     "Position": "K",
@@ -78,7 +78,16 @@ var team =
     "Week 1": "",
     "Week 2": "",
     "Week 3": "",
+    "Week 4": "",
+    "Player Total": ""
+  },
+  {
+    "Position": "",
+    "Player Name": "",
+    "Week 1": "",
+    "Week 2": "",
+    "Week 3": "",
     "Week 4": "Team Total",
-    "Player Total": 48
+    "Player Total": 127.14
   }
 ];

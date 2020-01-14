@@ -4,28 +4,28 @@ var team =
     "Position": "QB",
     "Player Name": "Lamar Jackson",
     "Week 1": 0,
-    "Week 2": "",
-    "Week 3": "",
-    "Week 4": "",
-    "Player Total": 0
+    "Week 2": 26.9,
+    "Week 3": 0,
+    "Week 4": 0,
+    "Player Total": 26.9
   },
   {
     "Position": "RB",
     "Player Name": "Aaron Jones",
     "Week 1": 0,
-    "Week 2": "",
+    "Week 2": 18.6,
     "Week 3": "",
     "Week 4": "",
-    "Player Total": 0
+    "Player Total": 18.6
   },
   {
     "Position": "RB",
     "Player Name": "Dalvin Cook",
     "Week 1": 25,
-    "Week 2": "",
-    "Week 3": "",
-    "Week 4": "",
-    "Player Total": 25
+    "Week 2": 2.6,
+    "Week 3": 0,
+    "Week 4": 0,
+    "Player Total": 27.6
   },
   {
     "Position": "WR",
@@ -40,28 +40,28 @@ var team =
     "Position": "WR",
     "Player Name": "Tyler Lockett",
     "Week 1": 6.2,
-    "Week 2": "",
-    "Week 3": "",
-    "Week 4": "",
-    "Player Total": 6.2
+    "Week 2": 19.6,
+    "Week 3": 0,
+    "Week 4": 0,
+    "Player Total": 25.8
   },
   {
     "Position": "FLEX",
     "Player Name": "Tyreek Hill",
     "Week 1": 0,
-    "Week 2": "",
+    "Week 2": 4.1,
     "Week 3": "",
     "Week 4": "",
-    "Player Total": 0
+    "Player Total": 4.1
   },
   {
     "Position": "TE",
     "Player Name": "George Kittle",
     "Week 1": 0,
-    "Week 2": "",
+    "Week 2": 1.6,
     "Week 3": "",
     "Week 4": "",
-    "Player Total": 0
+    "Player Total": 1.6
   },
   {
     "Position": "K",
@@ -78,7 +78,16 @@ var team =
     "Week 1": "",
     "Week 2": "",
     "Week 3": "",
+    "Week 4": "",
+    "Player Total": ""
+  },
+  {
+    "Position": "",
+    "Player Name": "",
+    "Week 1": "",
+    "Week 2": "",
+    "Week 3": "",
     "Week 4": "Team Total",
-    "Player Total": 45.2
+    "Player Total": 118.6
   }
-]
+];

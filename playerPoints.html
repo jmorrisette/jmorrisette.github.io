@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Playoff Challenge</title>
+  <title>Player Points</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -11,19 +11,20 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+
   <script type="text/javascript" src="jsontables.js"></script>
 </head>
 <body>
 
   <div class="container p-3 my-3 bg-dark text-white">
-    <h1 align="center">Team 14: Ryan Phillips</h1>
+    <h1 align="center">Playoff Challenge </h1>
 
     <ul class="nav justify-content-center">
       <li class="nav-item">
         <a class="nav-link" href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"></a>
       </li>
       <li class="nav-item">
         <div class="dropdown">
@@ -52,17 +53,18 @@
     </ul>
     <br/>
 
+
+    <br/>
+    <br/>
+    <h3 align="center"> Player Points </h3>
     <div class="table-responsive">
       <table id="basicTable" class="table table-dark table-sm">
       <thead>
         <tr>
-          <th>Position</th>
-          <th>Player Name</th>
-          <th>Week 1</th>
-          <th>Week 2</th>
-          <th>Week 3</th>
-          <th>Week 4</th>
-          <th>Player Total</th>
+          <th>Place</th>
+          <th>Owner</th>
+          <th>Team ID</th>
+          <th>Points</th>
         </tr>
       </thead>
       <tbody>
@@ -71,36 +73,53 @@
           <td>2</td>
           <td>3</td>
           <td>4</td>
-          <td>5</td>
-          <td>6</td>
-          <td>7</td>
         </tr>
       </tbody>
       </table>
     </div>
 
 
-    <p>Last Updated: 1/13/2020</p>
-    <p>If you have any questions or see any errors let me know asap.</p>
+    <p>Last Updated: 1/7/2020</p>
+
+  <br/>
+    </div>
+
 
   </div>
 
 
-  <script type="text/javascript" src="team14.js"></script>
 
-  <script>
-    $(document).ready(function()
-    {
-    	var jsonTable = new JSONTable($("#basicTable"))
-    	var tableData = jsonTable.toJSON()
-      for (var i = 0; i < team.length; i++) {
-        tableData[i] = team[i];
-      }
-      jsonTable.fromJSON(tableData)
-    })
-  </script>
+
+
+
+
+
+
+
+
+
+<!--
+<script type="text/javascript" src="myScript.js"></script>
+  -->
+<script type="text/javascript" src="playerPoints.js"></script>
+
+<script>
+  $(document).ready(function()
+  {
+  	var jsonTable = new JSONTable($("#basicTable"))
+  	var tableData = jsonTable.toJSON()
+    for (var i = 0; i < list.length; i++) {
+      tableData[i] = list[i];
+    }
+    jsonTable.fromJSON(tableData)
+  })
+
+
+  // $(document).ready( function () {
+  //   $('#basicTable').DataTable();
+  // });
+</script>
 
 
 </body>
-
 </html>
