@@ -11,7 +11,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"></script>
   <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 
 
@@ -50,48 +50,36 @@
           </div>
         </div>
       </li>
+
     </ul>
-    <br/>
-
-
-    <br/>
-    <br/>
-    <h3 align="center"> Player Points </h3>
-    <div class="table-responsive">
-      <table id="basicTable" class="table table-dark table-sm">
-      <thead>
-        <tr>
-          <th>Place</th>
-          <th>Owner</th>
-          <th>Team ID</th>
-          <th>Points</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>2</td>
-          <td>3</td>
-          <td>4</td>
-        </tr>
-      </tbody>
-      </table>
-    </div>
-
-
-    <p>Last Updated: 1/13/2020</p>
-
-  <br/>
-    </div>
-
-
+    <h3 align="center"> Player Points </h3> 
   </div>
 
 
 
-
-
-
+<div class="container p-3 my-3">
+  <div class="table-responsive">
+    <table id="basicTable" class="table">
+    <thead>
+      <tr>
+        <th>Place</th>
+        <th>Owner</th>
+        <th>Team ID</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+  <p>Last Updated: 1/13/2020</p>
+</div>
 
 
 
@@ -115,9 +103,17 @@
   })
 
 
-  // $(document).ready( function () {
-  //   $('#basicTable').DataTable();
-  // });
+  $(document).ready( function () {
+    $('#basicTable').DataTable(
+      {
+        paging: false,
+        info: true,
+        "columnDefs": [
+            { }
+          ]
+      }
+    );
+  });
 </script>
 
 

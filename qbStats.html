@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Page Title</title>
+  <title>Player Statistics</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -11,16 +11,20 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+
   <script type="text/javascript" src="jsontables.js"></script>
 </head>
 <body>
 
   <div class="container p-3 my-3 bg-dark text-white">
-    <h1 align="center">Playoff Challenge</h1>
+    <h1 align="center">QB Stats</h1>
 
     <ul class="nav justify-content-center">
       <li class="nav-item">
-        <a class="nav-link" href="playerPoints.html">Player Points</a>
+        <a class="nav-link" href="index.html">Home</a>
       </li>
       <li class="nav-item">
         <div class="dropdown">
@@ -46,49 +50,20 @@
           </div>
         </div>
       </li>
-      
     </ul>
     <br/>
 
-    <div class="card bg-primary">
-      <div class="card-header">
-        Weekly Recap - 1/13/2020
-      </div>
-      <div class="card-body">
-        <p class="card-text">A pathetic showing from the Vikings sends the 49ers
-           on to the NFC championship game. To make matters worse, the Packers
-           defeat the Seahawks with the help of two scores from Aaron Jones.
-            Derrick Henry goes beast-mode once again as the Titans stun the Ravens.
-             3 turnovers from Lamar Jackson, ouch! The Texans blow a 24-0 lead
-              and get crushed as Mahomes tosses 5 TDs, 3 of which go to Kelce.
-        </p>
-        <p class="card-text">Unfortunately, after two weeks Mitch still sits
-          in 1st place. The Wahlin brothers are chasing after him in 2nd and
-          3rd place. The good news this week is that Andy B is still in dead
-           last. Turns out his team is not, in fact, built for the long run
-            (neither is mine).</p>
-        <p class="card-text">Packers vs 49ers | NFC Championship
-        </p>
-        <p class="card-text">Titans vs Chiefs | AFC Championship
-        </p>
-        <p class="card-text">Good luck to everyone next week.</p>
-
-
-
-      </div>
-    </div>
-
 
     <br/>
     <br/>
-    <h3 align="center"> Leaderboard </h3>
+    <h3 align="center"> Player Points </h3>
     <div class="table-responsive">
-      <table id="basicTable" class="table table-dark">
+      <table id="basicTable" class="table table-dark table-sm">
       <thead>
         <tr>
           <th>Place</th>
           <th>Owner</th>
-          <th>Team ID </th>
+          <th>Team ID</th>
           <th>Points</th>
         </tr>
       </thead>
@@ -108,25 +83,25 @@
 
   <br/>
     </div>
-<!--
 
 
-    <a href="team_3.html">test</a>
-    <a href="team_4.html">test</a>
-    <a href="team_5.html">test</a>
-    <a href="team_6.html">test</a>
-    <a href="team_7.html">test</a>
-    <a href="team_8.html">test</a>
-    <a href="team_9.html">test</a>
-
-    -->
   </div>
+
+
+
+
+
+
+
+
+
+
 
 
 <!--
 <script type="text/javascript" src="myScript.js"></script>
   -->
-<script type="text/javascript" src="leaderboardMain.js"></script>
+<script type="text/javascript" src="qbStats.js"></script>
 
 <script>
   $(document).ready(function()
@@ -138,6 +113,11 @@
     }
     jsonTable.fromJSON(tableData)
   })
+
+
+  // $(document).ready( function () {
+  //   $('#basicTable').DataTable();
+  // });
 </script>
 
 
