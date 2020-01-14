@@ -67,7 +67,7 @@ var list = [
   },
   {
     "Place": 14,
-    "Owner": "Jack Morrisette",
+    "Owner": "Jack Morrisette ",
     "Total Points": 118.6
   },
   {
