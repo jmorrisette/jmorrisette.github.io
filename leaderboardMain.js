@@ -16,17 +16,17 @@ var list = [
     "Total Points": 212.6
   },
   {
-    "Place": 6,
+    "Place": 4,
     "Owner": "Seth King",
     "Total Points": 203.9
   },
   {
-    "Place": 4,
+    "Place": 5,
     "Owner": "Jake Wahlin",
     "Total Points": 199.78
   },
   {
-    "Place": 5,
+    "Place": 6,
     "Owner": "Zac Houle",
     "Total Points": 193.42
   },
