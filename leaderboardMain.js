@@ -13,7 +13,12 @@ var list = [
   {
     "Place": 3,
     "Owner": "Josh Bartness",
-    "Total Points": 201.06
+    "Total Points": 212.6
+  },
+  {
+    "Place": 6,
+    "Owner": "Seth King",
+    "Total Points": 203.9
   },
   {
     "Place": 4,
@@ -24,11 +29,6 @@ var list = [
     "Place": 5,
     "Owner": "Zac Houle",
     "Total Points": 193.42
-  },
-  {
-    "Place": 6,
-    "Owner": "Seth King",
-    "Total Points": 192.36
   },
   {
     "Place": 7,

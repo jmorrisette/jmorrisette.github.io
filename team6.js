@@ -13,9 +13,9 @@ var team =[
     "Player Name": "Raheem Mostert",
     "Week 1": 0,
     "Week 2": 5.8,
-    "Week 3": 35.06,
+    "Week 3": 46.6,
     "Week 4": "",
-    "Player Total": 40.86
+    "Player Total": 52.4
   },
   {
     "Postion": "RB",
@@ -87,6 +87,6 @@ var team =[
     "Week 2": "",
     "Week 3": "",
     "Week 4": "Team Total",
-    "Player Total": 192.36
+    "Player Total": 203.9
   }
 ];
