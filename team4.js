@@ -1,21 +1,20 @@
-var team =
-[
+var team =[
   {
     "Position": "QB",
     "Player Name": "Patrick Mahomes",
     "Week 1": 0,
     "Week 2": 38.14,
-    "Week 3": "",
+    "Week 3": 35.06,
     "Week 4": "",
-    "Player Total": 38.14
+    "Player Total": 73.2
   },
   {
     "Position": "RB",
     "Player Name": "Dalvin Cook",
     "Week 1": 25,
     "Week 2": 2.6,
-    "Week 3": "",
-    "Week 4": "",
+    "Week 3": 0,
+    "Week 4": 0,
     "Player Total": 27.6
   },
   {
@@ -23,9 +22,9 @@ var team =
     "Player Name": "Derrick Henry",
     "Week 1": 26.4,
     "Week 2": 24.32,
-    "Week 3": "",
-    "Week 4": "",
-    "Player Total": 50.72
+    "Week 3": 12.1,
+    "Week 4": 0,
+    "Player Total": 62.82
   },
   {
     "Position": "WR",
@@ -59,18 +58,18 @@ var team =
     "Player Name": "George Kittle",
     "Week 1": 0,
     "Week 2": 1.6,
-    "Week 3": "",
+    "Week 3": 1.9,
     "Week 4": "",
-    "Player Total": 1.6
+    "Player Total": 3.5
   },
   {
     "Position": "K",
     "Player Name": "Mason Crosby",
     "Week 1": 0,
     "Week 2": 4,
-    "Week 3": "",
-    "Week 4": "",
-    "Player Total": 4
+    "Week 3": 2,
+    "Week 4": 0,
+    "Player Total": 6
   },
   {
     "Position": "",
@@ -88,6 +87,6 @@ var team =
     "Week 2": "",
     "Week 3": "",
     "Week 4": "Team Total",
-    "Player Total": 142.36
+    "Player Total": 193.42
   }
 ];

@@ -1,5 +1,4 @@
-var team =
-[
+var team =[
   {
     "Position": "QB",
     "Player Name": "Lamar Jackson",
@@ -23,9 +22,9 @@ var team =
     "Player Name": "Derrick Henry",
     "Week 1": 26.4,
     "Week 2": 24.32,
-    "Week 3": "",
-    "Week 4": "",
-    "Player Total": 50.72
+    "Week 3": 12.1,
+    "Week 4": 0,
+    "Player Total": 62.82
   },
   {
     "Position": "WR",
@@ -50,9 +49,9 @@ var team =
     "Player Name": "Tyreek Hill",
     "Week 1": 0,
     "Week 2": 4.1,
-    "Week 3": "",
+    "Week 3": 19.4,
     "Week 4": "",
-    "Player Total": 4.1
+    "Player Total": 23.5
   },
   {
     "Position": "TE",
@@ -88,6 +87,6 @@ var team =
     "Week 2": "",
     "Week 3": "",
     "Week 4": "Team Total",
-    "Player Total": 148.52
+    "Player Total": 180.02
   }
 ];

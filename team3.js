@@ -1,13 +1,12 @@
-var team =
-[
+var team =[
   {
     "Position": "QB",
     "Player Name": "Patrick Mahomes",
     "Week 1": 0,
     "Week 2": 38.14,
-    "Week 3": "",
+    "Week 3": 35.06,
     "Week 4": "",
-    "Player Total": 38.14
+    "Player Total": 73.2
   },
   {
     "Position": "RB",
@@ -23,9 +22,9 @@ var team =
     "Player Name": "Aaron Jones",
     "Week 1": 0,
     "Week 2": 18.6,
-    "Week 3": "",
-    "Week 4": "",
-    "Player Total": 18.6
+    "Week 3": 20.3,
+    "Week 4": 0,
+    "Player Total": 38.9
   },
   {
     "Position": "WR",
@@ -59,9 +58,9 @@ var team =
     "Player Name": "George Kittle",
     "Week 1": 0,
     "Week 2": 1.6,
-    "Week 3": "",
+    "Week 3": 1.9,
     "Week 4": "",
-    "Player Total": 1.6
+    "Player Total": 3.5
   },
   {
     "Position": "K",
@@ -88,6 +87,6 @@ var team =
     "Week 2": "",
     "Week 3": "",
     "Week 4": "Team Total",
-    "Player Total": 127.14
+    "Player Total": 184.4
   }
 ];
