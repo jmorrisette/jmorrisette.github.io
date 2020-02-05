@@ -59,8 +59,8 @@ var team =[
     "Week 1": 0,
     "Week 2": 1.6,
     "Week 3": 1.9,
-    "Week 4": "",
-    "Player Total": 3.5
+    "Week 4": 3.6,
+    "Player Total": 7.1
   },
   {
     "Position": "K",
@@ -87,6 +87,6 @@ var team =[
     "Week 2": "",
     "Week 3": "",
     "Week 4": "Team Total",
-    "Player Total": 163.42
+    "Player Total": 167.02
   }
 ];

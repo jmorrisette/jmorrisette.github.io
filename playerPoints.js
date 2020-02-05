@@ -6,7 +6,7 @@ var list = [
     "Week 1": 21.5,
     "Week 2": 21.48,
     "Week 3": 0,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 42.98
   },
   {
@@ -15,7 +15,7 @@ var list = [
     "Week 1": 0,
     "Week 2": 26.9,
     "Week 3": 0,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 26.9
   },
   {
@@ -24,7 +24,7 @@ var list = [
     "Week 1": 8.82,
     "Week 2": 0,
     "Week 3": 0,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 8.82
   },
   {
@@ -33,8 +33,8 @@ var list = [
     "Week 1": 0,
     "Week 2": 38.14,
     "Week 3": 35.06,
-    "Week 4 (Super Bowl LIV)": "",
-    "Player Total": 73.2
+    "Week 4": 24.34,
+    "Player Total": 97.54
   },
   {
     "Position": "RB",
@@ -42,7 +42,7 @@ var list = [
     "Week 1": 25,
     "Week 2": 2.6,
     "Week 3": 0,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 27.6
   },
   {
@@ -51,7 +51,7 @@ var list = [
     "Week 1": 7,
     "Week 2": 0,
     "Week 3": 0,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 7
   },
   {
@@ -60,7 +60,7 @@ var list = [
     "Week 1": 26.4,
     "Week 2": 24.32,
     "Week 3": 12.1,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 62.82
   },
   {
@@ -69,7 +69,7 @@ var list = [
     "Week 1": 11.5,
     "Week 2": 0,
     "Week 3": 0,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 11.5
   },
   {
@@ -78,7 +78,7 @@ var list = [
     "Week 1": 0,
     "Week 2": 18.6,
     "Week 3": 20.3,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 38.9
   },
   {
@@ -87,7 +87,7 @@ var list = [
     "Week 1": 0,
     "Week 2": 3.1,
     "Week 3": 0,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 3.1
   },
   {
@@ -96,8 +96,8 @@ var list = [
     "Week 1": 0,
     "Week 2": 5.8,
     "Week 3": 46.6,
-    "Week 4 (Super Bowl LIV)": "",
-    "Player Total": 52.4
+    "Week 4": 12,
+    "Player Total": 64.4
   },
   {
     "Position": "WR",
@@ -105,7 +105,7 @@ var list = [
     "Week 1": 7,
     "Week 2": 0,
     "Week 3": 0,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 7
   },
   {
@@ -114,7 +114,7 @@ var list = [
     "Week 1": 22,
     "Week 2": 5.9,
     "Week 3": 0,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 27.9
   },
   {
@@ -123,7 +123,7 @@ var list = [
     "Week 1": 9,
     "Week 2": 11.8,
     "Week 3": 0,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 20.8
   },
   {
@@ -132,7 +132,7 @@ var list = [
     "Week 1": 10.2,
     "Week 2": 0,
     "Week 3": 0,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 10.2
   },
   {
@@ -141,7 +141,7 @@ var list = [
     "Week 1": 6.2,
     "Week 2": 19.6,
     "Week 3": 0,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 25.8
   },
   {
@@ -150,8 +150,8 @@ var list = [
     "Week 1": 0,
     "Week 2": 4.1,
     "Week 3": 19.4,
-    "Week 4 (Super Bowl LIV)": "",
-    "Player Total": 23.5
+    "Week 4": 10.5,
+    "Player Total": 34
   },
   {
     "Position": "TE",
@@ -159,7 +159,7 @@ var list = [
     "Week 1": 4.4,
     "Week 2": 0,
     "Week 3": 0,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 4.4
   },
   {
@@ -168,8 +168,8 @@ var list = [
     "Week 1": 0,
     "Week 2": 1.6,
     "Week 3": 1.9,
-    "Week 4 (Super Bowl LIV)": "",
-    "Player Total": 3.5
+    "Week 4": 3.6,
+    "Player Total": 7.1
   },
   {
     "Position": "TE",
@@ -177,8 +177,8 @@ var list = [
     "Week 1": 0,
     "Week 2": 31.4,
     "Week 3": 3,
-    "Week 4 (Super Bowl LIV)": "",
-    "Player Total": 34.4
+    "Week 4": 10.5,
+    "Player Total": 44.9
   },
   {
     "Position": "TE",
@@ -186,7 +186,7 @@ var list = [
     "Week 1": 0,
     "Week 2": 3.9,
     "Week 3": 0,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 3.9
   },
   {
@@ -195,7 +195,7 @@ var list = [
     "Week 1": 13,
     "Week 2": 0,
     "Week 3": 0,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 13
   },
   {
@@ -204,7 +204,7 @@ var list = [
     "Week 1": 5,
     "Week 2": 5,
     "Week 3": 0,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 10
   },
   {
@@ -213,7 +213,7 @@ var list = [
     "Week 1": 7,
     "Week 2": 0,
     "Week 3": 0,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 7
   },
   {
@@ -222,7 +222,7 @@ var list = [
     "Week 1": 10,
     "Week 2": 0,
     "Week 3": 0,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 10
   },
   {
@@ -231,7 +231,7 @@ var list = [
     "Week 1": 7,
     "Week 2": 6,
     "Week 3": 0,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 13
   },
   {
@@ -240,7 +240,7 @@ var list = [
     "Week 1": 13,
     "Week 2": 4,
     "Week 3": 0,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 17
   },
   {
@@ -249,7 +249,7 @@ var list = [
     "Week 1": 0,
     "Week 2": 7,
     "Week 3": 0,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 7
   },
   {
@@ -258,8 +258,8 @@ var list = [
     "Week 1": 0,
     "Week 2": 9,
     "Week 3": 16,
-    "Week 4 (Super Bowl LIV)": "",
-    "Player Total": 25
+    "Week 4": 9,
+    "Player Total": 34
   },
   {
     "Position": "K",
@@ -267,7 +267,7 @@ var list = [
     "Week 1": 0,
     "Week 2": 4,
     "Week 3": 2,
-    "Week 4 (Super Bowl LIV)": 0,
+    "Week 4": 0,
     "Player Total": 6
   }
 ];
